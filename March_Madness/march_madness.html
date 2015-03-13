@@ -30,16 +30,20 @@
   <script src="http://wilkinsd501.github.io/modernizr.custom.js"></script>
 </head>
 <body>
-  <div class="deck-container">
+  <div class="deck-container deck-scale on-slide-how-to-overview on-slide-0">
 
     <!-- Begin slides. Just make elements with a class of slide. -->
 
-    <section class="slide deck-next" id="Slide1" aria-hidden="true">
-      <div class="deck-slide-scaler"><img src="http://wilkinsd501.github.io/March_Madness/Slide1.jpg" alt="Slide1"></div>
+    <section class="slide deck-current" id="Slide1" aria-hidden="true">
+      <div class="deck-slide-scaler"><img src="http://wilkinsd501.github.io/March_Madness/Slide1.JPG" alt="Slide1"></div>
     </section>
 
 	<section class="slide deck-next" id="Slide2" aria-hidden="true">
-      <div class="deck-slide-scaler"><img src="http://wilkinsd501.github.io/March_Madness/Slide2.jpg" alt="Slide2"></div>
+      <div class="deck-slide-scaler"><img src="http://wilkinsd501.github.io/March_Madness/Slide2.JPG" alt="Slide2"></div>
+    </section>
+	
+	<section class="slide deck-after" id="Slide3" aria-hidden="true">
+      <div class="deck-slide-scaler"><img src="http://wilkinsd501.github.io/March_Madness/Slide3.JPG" alt="Slide2"></div>
     </section>
 
     <!-- End slides. -->
@@ -53,6 +57,11 @@
       <a href="#" class="deck-next-link" title="Next">&#8594;</a>
     </div>
 	-->
+	<div aria-role="navigation">
+      <a href="http://wilkinsd501.github.io/March_Madness/march_madness.html#" class="deck-prev-link deck-nav-disabled" title="Previous" aria-disabled="true">←</a>
+      <a href="http://wilkinsd501.github.io/March_Madness/march_madness.html#Slide1" class="deck-next-link" title="Next" aria-disabled="false">→</a>
+    </div>
+	
 
     <!-- deck.status snippet -->
 	<!--
@@ -62,6 +71,11 @@
       <span class="deck-status-total"></span>
     </p>
 	-->
+	<p class="deck-status" aria-role="status">
+      <span class="deck-status-current">1</span>
+      /
+      <span class="deck-status-total">3</span>
+    </p>
 
     <!-- deck.goto snippet -->
 	<!--
@@ -72,6 +86,12 @@
       <input type="submit" value="Go">
     </form>
 	-->
+	<form action="http://wilkinsd501.github.io/March_Madness/" method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"><option value="Slide1"></option><option value="Slide2"></option><option value="Slide3"></option></datalist>
+      <input type="submit" value="Go">
+    </form>
 
     <!-- End extension snippets. -->
   </div>
